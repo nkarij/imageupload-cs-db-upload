@@ -1,0 +1,96 @@
+/* hides the submit message */
+.formular__inactive {
+    display: none;
+}
+
+.formular__active {
+    display: block;
+}
+
+
+/* formular layout */
+.formular {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.formular input, .formular textarea {
+    width: 100%;
+    margin: 0 0 1em 0;
+}
+
+.formular button {
+     width: 100%;
+}
+
+/* preview and crop */
+
+.preview {
+    width: 45vw;
+    margin: 0;
+    vertical-align: top;
+}
+
+.preview-crop {
+    margin: 0;
+    vertical-align: top;
+}
+
+
+.preview-container {
+    position: relative;
+    margin: 5px;
+}
+
+.bounding-box {
+    position: absolute;
+    z-index: 1000;
+    outline: 2px dashed white;
+    box-shadow: 0 0 0 2px black;
+}
+
+.point1 {
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    background: red;
+    z-index: 900;
+    outline: 2px dashed white;
+    box-shadow: 0 0 0 2px black;
+}
+
+/* FEJLBESKEDERNE */
+
+/*JS viser/skjuler alle classer som ender på __error*/
+[class$="__error"] {
+    display: none;
+    background-color: grey;
+    padding: 0.3em;
+    margin: .35em 0 1em 0;
+    border-radius: 10px;
+    color: white;
+    position: relative;
+}
+
+/****dette er en grå trekant, som sidder på fejlmeddelelsen *****/
+[class$="__error"]::before { /*NB! Display arves fra class"error"]*/
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 12px solid grey;
+    position: absolute;
+    left: 1em;
+    top: -10px; 
+}
+
+
+@media(min-width:600px) {
+    
+    .formular, .formular input, .formular textarea, .formular button {
+        width: 50%;
+    }
+}
+
