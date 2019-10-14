@@ -1,0 +1,52 @@
+    
+    <div id="html-templates" class="formular__inactive">
+        <div id="formular-submit-message" >
+            <h2 class="formular-submit-message__heading">Din fil er uploadet</h2>
+        </div>
+    </div>
+
+    <!-- bemærk enctype -->
+    <form method="post" id="formular" enctype="multipart/form-data" class="formular">
+
+        <label for="imagetitle">Billedets Titel</label>
+        <input 
+        type="text" 
+        name="imagetitle" 
+        id="imagetitle"
+        required>
+        <p class="imagetitle__error"></p>
+
+        <label for="fileinput">Fornavn</label>
+        <!-- bemærk type=file -->
+        <input 
+        type="file" 
+        name="fileinput" 
+        id="fileinput"
+        >
+        <p class="fileinput__error"></p>
+
+        <!-- <label for="surnameinput">Efternavn</label>
+        <input 
+        type="text" 
+        name="surnameinput" 
+        id="surnameinput">
+        <p class="surnameinput__error"></p> -->
+
+        <button 
+        type="submit"
+        name="submitbutton"
+        >Send</button>
+    </form>
+
+    <!-- <script src="valider.js"></script> -->
+</body>
+</html>
+
+<!-- HTML VALIDERING AF TLF-INPUT, HVIS ALT ANDET GLIPPER. SE PATTERN -->
+<!-- <label for="tlfinput">Telefon</label>
+<input type="tel" 
+name="tlfinput" 
+id="tlfinput"
+pattern="[0-9]{8}"
+required>
+<p class="tlfinput__error"></p> -->
