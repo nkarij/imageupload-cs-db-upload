@@ -4,10 +4,10 @@
   "description": "imagecrop, with draggable box and uploader",
   "main": "app.js",
   "dependencies": {
-    "body-parser": "^1.19.0",
+    "body-parser": "^1.20.1",
     "date-and-time": "^0.9.0",
     "ejs": "^2.7.1",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "express-fileupload": "^1.1.5",
     "morgan": "^1.9.1",
     "mysql2": "^1.7.0",
